@@ -4,23 +4,17 @@
 
 
 <h1> Opportunities </h1>
-{% for resource in resources %}
-
-
-<div> 
-    <h3> {{ resource.name }} </h3>
-    <h4> {{ resource.deadline }}</h4> 
-</div>
-
-
-{% endfor %}
 
 {% for tag_data in tags_with_opportunities %}
     <div>
-        <strong>Tag:</strong> {{ tag_data.tag.name }}
+        {% comment %} <strong>Tag:</strong> {{ tag_data.tag.name }} {% endcomment %}
         <ul>
             {% for opportunity in tag_data.opportunities %}
-                <li>{{ opportunity.name }}</li>
+            <div> 
+            <h3> {{ opportunity.name }} </h3> 
+            {{ opportunity.description | truncatewords:50 }}
+            <a> </a> 
+            </div> 
             {% endfor %}
         </ul>
     </div>
