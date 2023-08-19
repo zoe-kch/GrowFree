@@ -40,6 +40,44 @@
     
     </div>
 
+    <div class="formbg">
+
+      <div class="formbgLeft">
+        <h1 class="connect">Connect With Others</h1>
+        <p>Volunteer as a Mentor</p>
+        <p>Research your Interests</p>
+        <p>Join Study Groups</p>
+      </div>
+
+      <form>
+        <label for="Email">email</label>
+        <input type="email" name="Email" placeholder="Enter email">
+        <label for="name">name</label>
+        <input type="text" name="Name" placeholder="Enter name">
+        <label>interests</label>
+        <div onmouseenter="dropdown()" id="interestsBox"></div>
+        <select name="interests" title="Interests" multiple id="dropdown">
+          <option value="Science">Science</option>
+          <option value="Engineering">Engineering</option>
+          <option value="Mathematics">Mathematics</option>
+          <option value="Fine Arts">Fine Arts</option>
+          <option value="Language">Language</option>
+          <option value="History">History</option>
+          <option value="Humanities">Humanities</option>
+          <option value="Education">Education</option>
+          <option value="BusinessFinance">Business/Finance</option>
+          <option value="Other">Other</option>
+        </select>
+        <label>which connections are you interested in?</label>
+        <div class="connections">
+          <button type="button" id="Mentor" onclick="highlight('Mentor')">Mentor</button>
+          <button type="button" id="Research" onclick="highlight('Research')">Research</button>
+          <button type="button" id="StudyGroup" onclick="highlight('StudyGroup')">Study Group</button>
+          <button type="button" id="Other" onclick="highlight('Other')">Other</button>
+        </div>
+      </form>
+
+    </div>
   </div>
     
   <script src="../index.js"></script>
