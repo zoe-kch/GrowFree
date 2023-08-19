@@ -1,0 +1,86 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: 'Arial Narrow';
+}
+.navBar {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+nav {
+  height: 15vh;
+  width: 80vw;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.navBar a {
+  color: white;
+  text-decoration: none;
+  font-size: 2vw;
+}
+.navBar a.active {
+  background-color: #3f160c;
+}
+.navLogo {
+  color: white;
+  margin: 15px;
+  font-size: 5vw;
+  text-align: center;
+  width: min-content;
+  font-family: 'Geneva';
+}
+.icon {
+  color: white;
+}
+
+.navBar .icon {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .navBar {display: none;}
+  .navBar a.icon {
+    float: right;
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  .navBar.responsive {position: relative;}
+  .navBar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navBar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.centerText {
+  align-self: center;
+  color: white;
+  text-align: center;
+  font-size: 3vw;
+  font-family: 'monospace';
+  margin-top: auto;
+}
+big {
+  color: #f6dc1d;
+  font-size: 4vw;
+}
+.images {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+img {
+  max-height: 30vh;
+}
