@@ -11,7 +11,7 @@
         <ul>
             {% for opportunity in tag_data.opportunities %}
             <div> 
-            <h3> {{ opportunity.name }} </h3> 
+            <h3> {{ opportunity.name }} || <a href="{{ opportunity.url }}"> link </a> </h3> 
             {{ opportunity.description | truncatewords:50 }}
             <a> </a> 
             </div> 
