@@ -7,24 +7,27 @@ from . import models
 def index(request):
     return render(request, 'index.html')
 
+
 def resources(request):
-    # context = {
-    #     "resources" : models.Opportunity.objects.all(),
-    #     "tags": models.Tag.objects.all(),
-    #     }
+    excluded_tags = []  # Add the names of tags to exclude
     context = {
-    "resources": models.Opportunity.objects.all(),
-    "tags": models.Tag.objects.all(),
-}
-    tags_with_opportunities = []
-    for tag in context["tags"]:
+        "resources": models.Opportunity.objects.all(),
+        "tags_with_opportunities": [],
+    }
+
+    for tag in models.Tag.objects.exclude(name__in=excluded_tags):
         tag_with_opportunities = {
             "tag": tag,
             "opportunities": tag.opportunities.all(),
         }
-        tags_with_opportunities.append(tag_with_opportunities)
-    context["tags_with_opportunities"] = tags_with_opportunities
-    return render(request , "opportunities.html" , context) 
+        context["tags_with_opportunities"].append(tag_with_opportunities)
+
+    return render(request, "opportunities.html", context)
+
+
+def opportunity_detail_view(request): 
+    return 
+
 
 
 ## Form  
