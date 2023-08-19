@@ -25,11 +25,6 @@ def resources(request):
     return render(request, "opportunities.html", context)
 
 
-def opportunity_detail_view(request): 
-    return 
-
-
-
 ## Form  
 def research_help(request):
     pass
