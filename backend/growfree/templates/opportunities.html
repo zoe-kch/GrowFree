@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+<h1> Opportunities </h1>
+{% for resource in resources %}
+
+
+<div> 
+    <h3> {{ resource.name }} </h3>
+    <h4> {{ resource.deadline }}</h4> 
+</div>
+
+
+{% endfor %}
+
+{% for tag_data in tags_with_opportunities %}
+    <div>
+        <strong>Tag:</strong> {{ tag_data.tag.name }}
+        <ul>
+            {% for opportunity in tag_data.opportunities %}
+                <li>{{ opportunity.name }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endfor %}
+
+
+
+{% endblock %}
