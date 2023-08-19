@@ -1,9 +1,9 @@
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-      document.getElementById("logo").style.height = "10vh";
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("logo").style.maxBlockSize = "8vw";
     } else {
-      document.getElementById("logo").style.height = "20vh";
+        document.getElementById("logo").style.maxBlockSize = "10vw";
     }
   }
