@@ -33,20 +33,13 @@ nav {
 .navBar :hover {
   color: #f6dc1d;
 }
-.navLogo {
+#logo {
   color: white;
   margin: 15px;
-  max-height: 20vh;
+  max-block-size: 10vw;
   font-family: 'Geneva';
   transition: .2s;
 }
-
-@media screen and (max-width: 600px) {
-  .navBar {
-    padding: 20px 10px !important;
-  }
-}
-
 .container {
   flex: 1;
   margin-top: 30dvh;
@@ -67,7 +60,7 @@ big {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: 0 8vw 20vh 8vw;
+  margin: 0 8vw 30vh 8vw;
 }
 img {
   max-width: 40vw;
@@ -75,5 +68,26 @@ img {
 h1 {
   color: white;
   font-weight: 200;
+  font-size: 5vw;
   text-align: center;
+}
+.about {
+  color: #78635D;
+  font-weight: 200;
+  font-size: 2vw;
+  text-align: center;
+  margin: 0 5vw 20vh 5vw;
+  padding: 20px;
+  background-color: rgba(136, 80, 62, .19);
+}
+.learnmore {
+  background-color: #78635D;
+  text-align: center;
+  margin: 0 5vw 10vh 5vw;
+  height: 50vh;
+}
+h3 {
+  color: white;
+  font-size: 2vw;
+  padding-top: 10px;
 }
