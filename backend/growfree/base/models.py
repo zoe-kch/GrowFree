@@ -6,6 +6,10 @@ status_choices = (
         ("inactive" , "inactive")
     )
 
+research_help_choices = (
+    ("mentor" , "mentor") , 
+    ("student" , "student")
+)
     
     
 class Tag(models.Model): 
@@ -15,7 +19,7 @@ class Tag(models.Model):
         return str(self.name)
 class Opportunity(models.Model): 
     name = models.CharField(max_length=200) 
-    description =  models.CharField(max_length=1000)
+    description =  models.CharField(max_length=1000, blank=True)
     url = models.URLField()
     deadline = models.DateField((""), auto_now=False, auto_now_add=False)
     status = models.CharField(
@@ -29,5 +33,22 @@ class Opportunity(models.Model):
 
     
     def __str__(self) -> str:
+        return str(self.name) + " || " +  str(self.tags.name) + " || " + str(self.deadline)
+
+class Interest(models.Model): 
+    name= models.CharField(max_length=50)
+    
+    def __str__(self) -> str:
         return str(self.name)
 
+    
+class Research_help(models.Model):
+    name = models.CharField(max_length=100)
+    help_type = models.CharField(max_length=100 , choices=research_help_choices , blank=False)
+    interests = models.ManyToManyField(Interest , blank=False , related_name='helpers')
+
+    def __str__(self) -> str:
+        return str(self.name)     
+    
+
+    
