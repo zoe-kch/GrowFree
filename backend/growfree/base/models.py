@@ -9,7 +9,10 @@ status_choices = (
 research_help_choices = (
     ("mentor" , "mentor") , 
     ("student" , "student"), 
-    ("studygroup"  , "studygroup"), 
+    ("study-group"  , "study-group"),
+    ('research' , 'research') , 
+    ('other' , 'other')
+    
     
 )
     
@@ -38,17 +41,19 @@ class Opportunity(models.Model):
         return str(self.name) + " || " +  str(self.tags.name) + " || " + str(self.deadline)
 
 class Interest(models.Model): 
-    name= models.CharField(max_length=50)
+    name= models.CharField(max_length=50, blank=False)
     
     def __str__(self) -> str:
         return str(self.name)
 
     
 class Research_help(models.Model):
-    name = models.CharField(max_length=100)
-    email = models.EmailField()
+    name = models.CharField(max_length=100, blank=False)
+    email = models.EmailField(blank=False, unique=True)
     help_type = models.CharField(max_length=100 , choices=research_help_choices , blank=False)
     interests = models.ManyToManyField(Interest , blank=False , related_name='helpers')
+    # mapped_users = models.
+
 
     def __str__(self) -> str:
         return str(self.name)     
