@@ -1,3 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="static/css/Opportunities.css">
+  <title>Opportunities</title>
+</head>
+<body>
+
+    <div class="navBar" id="navBar">
+      <a href="{% url 'index' %}">
+        <img src="static/assets/logo.png" alt="logo" id="logo">
+      </a>
+      <nav>
+        <a href="{% url 'resources' %}">Opportunities</a>
+        <a href="../AcademicsScreen/Academics.html">Academics</a>
+        <a href="../FinancingScreen/Financing.html">Financing</a>
+      </nav>
+    </div>
+
+    <div class="container">
+
+      <h1>Find Free Opportunities</h1>
+
+
+ {% for opportunity in resources %}
+      <div class="opportunity">
+        <div class="opportunityLeft">
+          <h2>{{ opportunity.name }}</h2>
+          <row>
+            {% for tag in opportunity.tags.all %}
+            <tag>{{ tag.name }}</tag>
+            {% endfor %}
+            <strong>{{ opportunity.status }}</strong>
+          </row>
+          <row class="duedate">
+            <img src="static/assets/clock.png" alt="clock icon" class="clock">
+            <strong>{{ opportunity.deadline }}</strong>
+          </row>
+          <tag class="link"><a href="{{ opportunity.url }}" target="_blank">Learn More</a></tag>
+        </div>
+        <div class="description">
+          <label>Description</label>
+          <p>{{opportunity.description}}</p>
+        </div> 
+    </div> 
+</div>
+
+{% endfor %}  
+
+
+  <script src="static/js/opportunities.js"></script>
+</body>
+</html>
+
+
+
+
+
+{% comment %} 
+
+
+
 {% extends 'base.html' %}
 
 {% block body %}
@@ -8,7 +72,7 @@
 {% for tag_data in tags_with_opportunities %}
     <div>
         {% comment %} <strong>Tag:</strong> {{ tag_data.tag.name }} {% endcomment %}
-        <ul>
+        {% comment %} <ul>
             {% for opportunity in tag_data.opportunities %}
             <div> 
             <h3> {{ opportunity.name }} || <a href="{{ opportunity.url }}"> link </a> </h3> 
@@ -18,8 +82,6 @@
             {% endfor %}
         </ul>
     </div>
-{% endfor %}
+{% endfor %} {% endcomment %}
 
 
-
-{% endblock %}

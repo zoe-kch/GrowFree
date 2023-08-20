@@ -44,6 +44,7 @@ def resources(request):
     excluded_tags = []  # Add the names of tags to exclude
     context = {
         "resources": models.Opportunity.objects.all(),
+        "tags" : models.Tag.objects.all(), 
         "tags_with_opportunities": [],
     }
 
