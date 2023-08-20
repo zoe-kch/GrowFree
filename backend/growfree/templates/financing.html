@@ -1,41 +1,45 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'css/academics.css' %}">
-  <title>Academics</title>
+  <link rel="stylesheet" href="{% static 'css/financing.css' %}">
+  <title>Financing</title>
 </head>
 <body>
   <div>
-    <div class="navBar" id="navBar">
-      <a href="{% url 'index' %}">
-        <img src="{% static 'assets/logo.png' %}" alt="logo" id="logo">
-      </a>
-      <nav>
-        <a href="{% url 'resources' %}">Opportunities</a>
-        <a href="{% url 'academics' %}">Academics</a>
-        <a href="{% url 'finance' %}">Financing</a>
-      </nav>
+    
+  <div class="navBar" id="navBar">
+    <img src="{% static '/assets/logo.png' %} " alt="logo" id="logo">
+    <nav>
+      <a href="{% url 'resources' %}">Opportunities</a>
+      <a href="{% url 'academics' %}">Academics</a>
+      <a href="{% url 'finance' %}">Financing</a>
+    </nav>
+  </div>
+
     </div>
 
+    
     <div class="container">
 
-      <h1>Academic Preparation</h1>
+      <h1>Financing</h1>
       <div class="bg">
 
-        <h2>Resources to learn about everything you need to know and more!</h2>
+        <h2>
+          You deserve an education free of financial strain.</br>
+          Learn about affording college and navigating adult life finances.
+        </h2>
         
 
         <row class="main">
           <div class="leftSide">
             <div class="section">
-            <h3>School Before College</h3>
+            <h3>Navigating Scholarships</h3>
             <ul>
               {% for i in data %}
-              {% if i.topic == "School_Before_College" %}
+              {% if i.topic == "Navigating_Scholarships" %}
                 <li><a href="{{ i.url }}">{{i.name}}</a></li>
               {%endif %}
               {% endfor %}
@@ -45,10 +49,10 @@
           </div>
 
             <div class="section">
-              <h3>Searching for Colleges</h3>
+              <h3>Financial Aid</h3>
               <ul>
                 {% for i in data %}
-              {% if i.topic == "Searching_For_Colleges" %}
+              {% if i.topic == "Financial_Aid" %}
                 <li><a href="{{ i.url }}">{{i.name}}</a></li>
               {%endif %}
               {% endfor %}
@@ -57,21 +61,10 @@
             </div>
 
             <div class="section">
-              <h3>Exam Prep</h3>
+              <h3>Sponsors</h3>
               <ul>
-              {% for i in data %}
-              {% if i.topic == "Exam_Prep" %}
-                <li><a href="{{ i.url }}">{{i.name}}</a></li>
-              {%endif %}
-              {% endfor %}
-              </ul>
-            </div>
-
-            <div class="section">
-              <h3>College Applications</h3>
-              <ul>
-              {% for i in data %}
-              {% if i.topic == "College_Application" %}
+                {% for i in data %}
+              {% if i.topic == "Sponsors" %}
                 <li><a href="{{ i.url }}">{{i.name}}</a></li>
               {%endif %}
               {% endfor %}
@@ -84,10 +77,10 @@
 
           <div class="rightSide">
             <div class="section">
-              <h3>Research</h3>
+              <h3>Budgeting</h3>
               <ul>
-               {% for i in data %}
-              {% if i.topic == "Research" %}
+                {% for i in data %}
+              {% if i.topic == "Budgeting" %}
                 <li><a href="{{ i.url }}">{{i.name}}</a></li>
               {%endif %}
               {% endfor %}
@@ -96,33 +89,21 @@
             </div>
 
             <div class="section">
-              <h3>Mentors & Tutors</h3>
+              <h3>Financial Literacy Courses</h3>
               <ul>
-               {% for i in data %}
-              {% if i.topic == "Mentors" %}
+                {% for i in data %}
+              {% if i.topic == "Financial_Literacy_Courses" %}
                 <li><a href="{{ i.url }}">{{i.name}}</a></li>
               {%endif %}
               {% endfor %}
- 
-              </ul>
-            </div>
 
-            <div class="section">
-              <h3>Extracurriculars</h3>
-              <ul>
-              {% for i in data %}
-              {% if i.topic == "Extracurriculars" %}
-                <li><a href="{{ i.url }}">{{i.name}}</a></li>
-              {%endif %}
-              {% endfor %}
- 
               </ul>
             </div>
 
             <div class="section">
               <h3>Additional Resources</h3>
               <ul>
-                {% for i in data %}
+       {% for i in data %}
               {% if i.topic == "Additional_resources" %}
                 <li><a href="{{ i.url }}">{{i.name}}</a></li>
               {%endif %}
@@ -140,7 +121,6 @@
       </div>
 
     </div>
-    
 
   </div>
 

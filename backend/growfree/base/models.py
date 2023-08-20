@@ -1,5 +1,29 @@
 from django.db import models
 
+college_resource_type = ( 
+    ("academics" , "academics") , 
+    ("finance" , "finance") 
+)
+
+college_resource_topic = ( 
+    ("School_Before_College" , "School_Before_College"), 
+    ("Searching_for_Colleges", "Searching_for_Colleges"), 
+    ("Exam_Prep" , "Exam_Prep"), 
+    ("College_Application" , "College_Application"), 
+    ("Research" , "Research"), 
+    ("Mentors" , "Mentors"), 
+    ("Extracurriculars" , "Extracurriculars"), 
+    ("Navigating_Scholarships" , "Navigating_Scholarships"), 
+    ("Financial_Aid" , "Financial_Aid"), 
+    ("Sponsors" , "Sponsors"), 
+    ("Budgeting" , "Budgeting"), 
+    ("Financial_Literacy_Courses" , "Financial_Literacy_Courses"), 
+    ("Additional_resources" , "Additional_resources")
+
+)
+
+
+
 
 status_choices = (
         ("active" , "active"),
@@ -59,4 +83,12 @@ class Research_help(models.Model):
         return str(self.name)     
     
 
-    
+class college_help(models.Model): 
+    name = models.CharField(max_length=300) 
+    url = models.URLField()
+    resource_type = models.CharField(max_length=100 , choices=college_resource_type)
+    topic = models.CharField(max_length=200 , choices=college_resource_topic)
+
+
+    def __str__(self) -> str:
+        return str(self.name)

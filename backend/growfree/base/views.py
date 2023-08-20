@@ -105,8 +105,13 @@ def research_help(request):
 
 
 def academic_screen(request): 
-    return render(request, "academics.html" )
+    context = {
+        "data" :  models.college_help.objects.filter(resource_type="academics")} 
+    return render(request, "academics.html" , context)
 
     
 def finance(request):
-    pass
+    context = { "data" : models.college_help.objects.filter(resource_type="finance")} 
+
+    context=None
+    return render(request, "financing.html" , context)
