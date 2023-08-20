@@ -122,9 +122,15 @@ tag a {
 }
 label {
   margin: 10px;
-  color: black;
-  text-decoration: underline;
+  color: rgba(0, 0, 0, 0.516);
+  font-weight: 700;
 }
 p {
   margin: 10px;
+  font-size: 20px;
+}
+#filterType {
+  width: 40%;
+  align-self: center;
+  border-style: none;
 }

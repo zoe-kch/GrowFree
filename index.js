@@ -17,3 +17,6 @@ function dropdown() {
 function highlight(x) {
     document.getElementById(x).style.backgroundColor = "#f6dc1d";
 }
+function oppDropdown() {
+
+}
