@@ -1,6 +1,7 @@
 window.onscroll = function() {scrollFunction()};
 
 document.getElementById("dropdown").style.display = "none";
+document.getElementById("filterType").style.height = "40px";
 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -16,4 +17,7 @@ function dropdown() {
 }
 function highlight(x) {
     document.getElementById(x).style.backgroundColor = "#f6dc1d";
+}
+function oppDropdown() {
+    document.getElementById("filterType").style.height = "max-content";
 }

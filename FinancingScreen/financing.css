@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: black;
-  font-family: 'Arial Narrow';
+  font-family: 'Segoe UI';
 }
 .navBar {
   display: flex;
@@ -28,11 +28,8 @@ nav {
   color: white;
   text-decoration: none;
   font-size: 2vw;
-  font-weight: 700;
+  font-weight: 100;
 }
-a:active {
-    color: #f6dc1d;
-  }
 .navBar :hover {
   color: #f6dc1d;
 }
