@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +11,7 @@
 <body>
 
   <div class="navBar" id="navBar">
-    <img src="static/assets/logo.png" alt="logo" id="logo">
+    <img src="{% static '/assets/logo.png' %} " alt="logo" id="logo">
     <nav>
       <a href="{% url 'resources' %}">Opportunities</a>
       <a href="../AcademicsScreen/Academics.html">Academics</a>
@@ -26,8 +27,8 @@
     </p>
 
     <div class="images">
-      <img src="static/assets/homePic1.jpg" alt="First generation graduation cap thanking parents for sacrifices"/>
-      <img src="static/assets/homePic2.jpg" alt="First generation graduation"/>
+      <img src="{% static '/assets/homePic1.jpg' %}" alt="First generation graduation cap thanking parents for sacrifices"/>
+      <img src="{% static '/assets/homePic2.jpg' %} " alt="First generation graduation"/>
     </div>
     
     <h1>Why We Do What We Do</h1>
@@ -85,6 +86,6 @@
     </div>
   </div>
     
-  <script src="static/js/index.js"></script>
+  <script src="{% static '/js/index.js' %}"></script>
 </body>
 </html>
