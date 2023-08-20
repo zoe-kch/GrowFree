@@ -11,7 +11,9 @@
 <body>
 
   <div class="navBar" id="navBar">
-    <img src="{% static '/assets/logo.png' %} " alt="logo" id="logo">
+      <a href="{% url 'index' %}">
+        <img src="{% static '/assets/logo.png' %} " alt="logo" id="logo">
+      </a>
     <nav>
       <a href="{% url 'resources' %}">Opportunities</a>
       <a href="{% url 'academics' %}">Academics</a>
