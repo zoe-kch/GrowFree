@@ -13,6 +13,9 @@ body {
   position: fixed;
   top: 0;
   transition: .2s;
+  border-bottom-color: #f6dc1d;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
 }
 nav {
   height: 15vh;
@@ -30,7 +33,7 @@ nav {
   font-size: 2vw;
   font-weight: 100;
 }
-.navBar a:active {
+#navAc {
   color: #f6dc1d;
 }
 .navBar :hover {
@@ -55,13 +58,20 @@ nav {
   display: flex;
   flex-direction: column;
   border-radius: 20px;
+  margin-bottom: 10vh;
 }
 h1 {
   font-size: 5vw;
   font-family: 'Segoe UI';
   text-align: center;
-  color: #f6dc1d;
+  color: white;
   font-weight: 100;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: white;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 h2 {
   color: #BBA7A1;

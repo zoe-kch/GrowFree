@@ -14,6 +14,9 @@ body {
   position: fixed;
   top: 0;
   transition: .2s;
+  border-bottom-color: #f6dc1d;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
 }
 nav {
   height: 15vh;
@@ -30,6 +33,9 @@ nav {
   text-decoration: none;
   font-size: 2vw;
   font-weight: 100;
+}
+#navOpp {
+  color: #f6dc1d;
 }
 .navBar :hover {
   color: #f6dc1d;
@@ -48,8 +54,11 @@ h1 {
   font-size: 5vw;
   font-family: 'Segoe UI';
   text-align: center;
-  color: #f6dc1d;
+  color: white;
   font-weight: 100;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: white;
 }
 .opportunity {
   background-color: #D5B07C;
