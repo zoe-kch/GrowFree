@@ -37,7 +37,7 @@
         
 
         <row class="main">
-          <div class="leftSide">
+          <div class="side">
             <div class="section">
             <h3>Navigating Scholarships</h3>
             <ul>
@@ -78,18 +78,8 @@
 
           
 
-          <div class="rightSide">
-            <div class="section">
-              <h3>Budgeting</h3>
-              <ul>
-                {% for i in data %}
-              {% if i.topic == "Budgeting" %}
-                <li><a href="{{ i.url }}">{{i.name}}</a></li>
-              {%endif %}
-              {% endfor %}
-
-              </ul>
-            </div>
+          <div class="side">
+            
 
             <div class="section">
               <h3>Financial Literacy Courses</h3>

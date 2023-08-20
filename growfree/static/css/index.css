@@ -14,6 +14,10 @@ body {
   position: fixed;
   top: 0;
   transition: .2s;
+  width: 100%;
+  border-bottom-color: #f6dc1d;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
 }
 nav {
   height: 15vh;
@@ -82,12 +86,6 @@ h1 {
   margin: 0 5vw 20vh 5vw;
   padding: 20px;
   background-color: rgba(136, 80, 62, .19);
-}
-.learnmore {
-  background-color: #78635D;
-  text-align: center;
-  margin: 0 5vw 10vh 5vw;
-  height: 50vh;
 }
 h3 {
   color: white;

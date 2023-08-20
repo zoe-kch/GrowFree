@@ -97,6 +97,7 @@ li a {
 li {
   color: rgba(0, 0, 0, .5);
   font-size: 2vw;
+  margin-bottom: 5px;
 }
 .section {
   margin: 10px;
@@ -110,4 +111,7 @@ row.main {
   justify-content: space-between;
   width: 80%;
   align-self: center;
+}
+.side {
+  width: 50%;
 }

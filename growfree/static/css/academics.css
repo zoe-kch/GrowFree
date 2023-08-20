@@ -13,6 +13,9 @@ body {
   position: fixed;
   top: 0;
   transition: .2s;
+  border-bottom-color: #f6dc1d;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
 }
 nav {
   height: 15vh;
@@ -87,6 +90,7 @@ li a {
 li {
   color: rgba(255, 255, 255, .5);
   font-size: 2vw;
+  margin-bottom: 5px;
 }
 .section {
   margin: 10px;
@@ -100,4 +104,7 @@ row.main {
   justify-content: space-between;
   width: 80%;
   align-self: center;
+}
+.side {
+  width: 50%;
 }

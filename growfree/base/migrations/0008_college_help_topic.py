@@ -13,7 +13,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='college_help',
             name='topic',
-            field=models.CharField(choices=[('School_Before_College', 'School_Before_College'), ('Searching_for_Colleges', 'Searching_for_Colleges'), ('Exam_Prep', 'College_Applications'), ('Research', 'Research'), ('Mentors', 'Mentors'), ('Extracurriculars', 'Extracurriculars'), ('Additional', 'Additional'), ('Navigating_Scholarships', 'Navigating_Scholarships'), ('Financial_Aid', 'Financial_Aid'), ('Sponsors', 'Sponsors'), ('Budgeting', 'Budgeting'), ('Financial_Literacy_Courses', 'Financial_Literacy_Courses'), ('Additional_resources', 'Additional_resources')], default=1, max_length=100),
+            field=models.CharField(choices=[('School_Before_College', 'School_Before_College'), ('Searching_for_Colleges', 'Searching_for_Colleges'), ('Exam_Prep', 'College_Applications'), ('Research', 'Research'), ('Mentors', 'Mentors'), ('Extracurriculars', 'Extracurriculars'), ('Additional', 'Additional'), ('Navigating_Scholarships', 'Navigating_Scholarships'), ('Financial_Aid', 'Financial_Aid'), ('Sponsors', 'Sponsors'), ('Financial_Literacy_Courses', 'Financial_Literacy_Courses'), ('Additional_resources', 'Additional_resources')], default=1, max_length=100),
             preserve_default=False,
         ),
     ]

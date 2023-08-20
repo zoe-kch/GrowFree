@@ -15,8 +15,7 @@ college_resource_topic = (
     ("Extracurriculars" , "Extracurriculars"), 
     ("Navigating_Scholarships" , "Navigating_Scholarships"), 
     ("Financial_Aid" , "Financial_Aid"), 
-    ("Sponsors" , "Sponsors"), 
-    ("Budgeting" , "Budgeting"), 
+    ("Sponsors" , "Sponsors"),
     ("Financial_Literacy_Courses" , "Financial_Literacy_Courses"), 
     ("Additional_resources" , "Additional_resources")
 
