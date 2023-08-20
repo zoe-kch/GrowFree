@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: black;
-  font-family: 'Arial Narrow';
+  font-family: 'Segoe UI';
 }
 .navBar {
   display: flex;
@@ -28,7 +28,7 @@ nav {
   color: white;
   text-decoration: none;
   font-size: 2vw;
-  font-weight: 700;
+  font-weight: 100;
 }
 .navBar a:active {
   color: #f6dc1d;
@@ -46,4 +46,30 @@ nav {
 .container {
   flex: 1;
   margin-top: 30dvh;
+}
+.bg {
+  background-color: #D5b07c;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  font-size: 5vw;
+  font-family: 'Segoe UI';
+  text-align: center;
+  color: #f6dc1d;
+  font-weight: 100;
+}
+h2 {
+  color: white;
+  text-align: center;
+  border-bottom-width: 5px;
+  border-bottom-color: #957a54;
+  border-bottom-style: solid;
+  padding-bottom: 10px;
+}
+h3 {
+  margin-left: 2vw;
 }
