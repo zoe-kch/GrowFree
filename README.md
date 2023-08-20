@@ -1,4 +1,4 @@
-"# empowerhack" 
+# empowerhack
 
 # Starter 
 ```
