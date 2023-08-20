@@ -48,12 +48,13 @@ nav {
   margin-top: 30dvh;
 }
 .bg {
-  background-color: #D5b07c;
-  width: 95%;
+  background-color: #1a0f0c;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-direction: column;
+  border-radius: 20px;
 }
 h1 {
   font-size: 5vw;
@@ -63,13 +64,40 @@ h1 {
   font-weight: 100;
 }
 h2 {
-  color: white;
+  color: #BBA7A1;
   text-align: center;
   border-bottom-width: 5px;
-  border-bottom-color: #957a54;
+  border-bottom-color: #78635D;
   border-bottom-style: solid;
   padding-bottom: 10px;
+  font-size: 3vw;
+  font-weight: 100;
 }
 h3 {
-  margin-left: 2vw;
+  margin-bottom: 0;
+  color: white;
+  font-size: 3vw;
+  font-weight: 200;
+}
+li a {
+  font-style: italic;
+  color: rgba(255, 255, 255, .5);
+  text-decoration: none;
+}
+li {
+  color: rgba(255, 255, 255, .5);
+  font-size: 2vw;
+}
+.section {
+  margin: 10px;
+  margin-bottom: 5vh;
+}
+row {
+  display: flex;
+  flex-direction: row;
+}
+row.main {
+  justify-content: space-between;
+  width: 80%;
+  align-self: center;
 }
