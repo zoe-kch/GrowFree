@@ -140,10 +140,6 @@ form {
   background-color: white;
   justify-content: space-between;
 }
-button {
-  background-color: white;
-  border: none;
-}
 input {
   margin-bottom: 3vh;
   border: none;
@@ -155,4 +151,11 @@ label {
 }
 select {
   margin-bottom: 3vh;
+}
+.submit {
+  width: 10vw;
+  border-radius: 20px;
+  background-color: #f6dc1d;
+  font-weight: 600;
+  align-self: center;
 }

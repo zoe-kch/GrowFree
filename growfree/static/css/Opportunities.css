@@ -37,6 +37,9 @@ nav {
 .navBar :hover {
   color: #f6dc1d;
 }
+#navOpp {
+  color: #f6dc1d;
+}
 #logo {
   color: white;
   margin: 15px;
