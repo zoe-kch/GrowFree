@@ -104,5 +104,9 @@ def research_help(request):
     
 
 
+def academic_screen(request): 
+    return render(request, "academics.html" )
 
     
+def finance(request):
+    pass
