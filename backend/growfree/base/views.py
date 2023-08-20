@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from . import models 
+from django.urls import reverse
 
 # Create your views here.
 
@@ -25,11 +26,22 @@ def resources(request):
     return render(request, "opportunities.html", context)
 
 
-def opportunity_detail_view(request): 
-    return 
-
-
-
 ## Form  
 def research_help(request):
-    pass
+    if request.method == "POST": 
+        email = request.POST["Email"]
+        name = request.POST["Name"]
+        interests_names = request.POST.getlist("interests")
+        help_type = request.POST["connections"]
+
+        if len(interests_names) > 1: 
+            interests = [models.Interest.objects.get_or_create(name=interest)[0] for interest in interests_names ]  
+        else: 
+            interests = models.Interest.objects.get_or_create(name=interests_names[0])
+        
+
+        research_helper = models.Research_help.objects.create(name=name , email=email , help_type=help_type)
+        research_helper.interests.add(*interests)
+
+        return HttpResponseRedirect(reverse('index'))
+    

@@ -8,7 +8,9 @@ status_choices = (
 
 research_help_choices = (
     ("mentor" , "mentor") , 
-    ("student" , "student")
+    ("student" , "student"), 
+    ("studygroup"  , "studygroup"), 
+    
 )
     
     
@@ -44,6 +46,7 @@ class Interest(models.Model):
     
 class Research_help(models.Model):
     name = models.CharField(max_length=100)
+    email = models.EmailField()
     help_type = models.CharField(max_length=100 , choices=research_help_choices , blank=False)
     interests = models.ManyToManyField(Interest , blank=False , related_name='helpers')
 

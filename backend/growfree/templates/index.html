@@ -1,5 +1,90 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="static/css/index.css">
+  <title>GrowFree</title>
+</head>
 
-{% block body %}
-<h1> Index Page  </h1> 
-{% endblock %}
+<body>
+
+  <div class="navBar" id="navBar">
+    <img src="static/assets/logo.png" alt="logo" id="logo">
+    <nav>
+      <a href="../OpportunitiesScreen/Opportunities.html">Opportunities</a>
+      <a href="../AcademicsScreen/Academics.html">Academics</a>
+      <a href="../FinancingScreen/Financing.html">Financing</a>
+    </nav>
+  </div>
+
+  <div class="container">
+    <p class="centerText">
+      FIND OPPORTUNITIES TO <big>GROW</big> FOR <big>FREE</big><br/>
+      DO NOT LET YOUR FINANCIAL SITUATION LIMIT <big>YOUR FUTURE</big><br/>
+      <big>ACCESSIBLE OPPORTUNITIES</big> FOR ALL<br/>
+    </p>
+
+    <div class="images">
+      <img src="static/assets/homePic1.jpg" alt="First generation graduation cap thanking parents for sacrifices"/>
+      <img src="static/assets/homePic2.jpg" alt="First generation graduation"/>
+    </div>
+    
+    <h1>Why We Do What We Do</h1>
+    <p class="about">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Enim lobortis scelerisque fermentum dui. In hac habitasse platea dictumst vestibulum. Eget dolor morbi non arcu risus quis varius. Urna nec tincidunt praesent semper feugiat nibh sed. Adipiscing diam donec adipiscing tristique risus nec feugiat in. Id diam maecenas ultricies mi eget mauris. Nunc sed blandit libero volutpat sed cras. Blandit aliquam etiam erat velit scelerisque in. Sit amet massa vitae tortor condimentum lacinia quis vel. Facilisi etiam dignissim diam quis enim. Et netus et malesuada fames ac turpis egestas. Sit amet mattis vulputate enim nulla aliquet porttitor lacus. Quam id leo in vitae turpis. Risus pretium quam vulputate dignissim suspendisse in est. Et egestas quis ipsum sus
+    </p>
+
+    <div class="learnmore">
+      <h3>Want to learn more about college preparation but don't know where to start?</h3>
+    
+    </div>
+
+    <div class="formbg">
+
+      <div class="formbgLeft">
+        <h1 class="connect">Connect With Others</h1>
+        <p>Volunteer as a Mentor</p>
+        <p>Research your Interests</p>
+        <p>Join Study Groups</p>
+      </div>
+
+      <form method="post" action="research_help">
+        {% csrf_token %}
+
+
+        <label for="Email">email</label>
+        <input type="email" name="Email" placeholder="Enter email" required=True>
+        <label for="name">name</label>
+        <input type="text" name="Name" placeholder="Enter name" required>
+        <label>interests</label>
+        <div onmouseenter="dropdown()" id="interestsBox"></div>
+        <select name="interests" title="Interests" multiple id="dropdown" required>
+          <option value="Science">Science</option>
+          <option value="Engineering">Engineering</option>
+          <option value="Mathematics">Mathematics</option>
+          <option value="Fine Arts">Fine Arts</option>
+          <option value="Language">Language</option>
+          <option value="History">History</option>
+          <option value="Humanities">Humanities</option>
+          <option value="Education">Education</option>
+          <option value="BusinessFinance">Business/Finance</option>
+          <option value="Other">Other</option>
+        </select>
+        <label>which connections are you interested in?</label>
+        <select class="connections" required name="connections" title="connections">
+          <option value="mentor" type="button" id="Mentor" onclick="highlight('Mentor')">Mentor</option>
+          <option value="Research" type="button" id="Research" onclick="highlight('Research')">Research</option>
+          <option value="Study-Group" type="button" id="StudyGroup" onclick="highlight('StudyGroup')">Study Group</option>
+          <option value="Other" type="button" id="Other" onclick="highlight('Other')">Other</button>
+        </select>
+
+        <input type="submit" value="submit">
+      </form>
+
+    </div>
+  </div>
+    
+  <script src="static/js/index.js"></script>
+</body>
+</html>

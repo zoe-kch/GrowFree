@@ -50,7 +50,10 @@
         <p class="connectEx">Join Study Groups</p>
       </div>
 
-      <form>
+      <form method="post" action="research_help">
+        {% csrf_token %}
+
+
         <label for="Email">email</label>
         <input type="email" name="Email" placeholder="Enter email">
         <label for="name">name</label>
@@ -76,6 +79,8 @@
           <button type="button" id="StudyGroup" onclick="highlight('StudyGroup')">Study Group</button>
           <button type="button" id="Other" onclick="highlight('Other')">Other</button>
         </div>
+
+        <input type="submit" value="submit">
       </form>
 
     </div>
