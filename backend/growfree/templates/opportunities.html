@@ -1,16 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="static/css/Opportunities.css">
+  <link rel="stylesheet" href="{% static '/css/Opportunities.css' %}">
   <title>Opportunities</title>
 </head>
 <body>
 
     <div class="navBar" id="navBar">
       <a href="{% url 'index' %}">
-        <img src="static/assets/logo.png" alt="logo" id="logo">
+        <img src="{% static '/assets/logo.png' %} " alt="logo" id="logo">
       </a>
       <nav>
         <a href="{% url 'resources' %}">Opportunities</a>
@@ -30,12 +31,12 @@
           <h2>{{ opportunity.name }}</h2>
           <row>
             {% for tag in opportunity.tags.all %}
-            <tag>{{ tag.name }}</tag>
+            <tag><a href="{% url 'filtered_opportunities' tag.name %}">{{ tag.name }}</a></tag>
             {% endfor %}
             <strong>{{ opportunity.status }}</strong>
           </row>
           <row class="duedate">
-            <img src="static/assets/clock.png" alt="clock icon" class="clock">
+            <img src="{% static '/assets/clock.png' %}" alt="clock icon" class="clock">
             <strong>{{ opportunity.deadline }}</strong>
           </row>
           <tag class="link"><a href="{{ opportunity.url }}" target="_blank">Learn More</a></tag>
@@ -53,35 +54,4 @@
   <script src="static/js/opportunities.js"></script>
 </body>
 </html>
-
-
-
-
-
-{% comment %} 
-
-
-
-{% extends 'base.html' %}
-
-{% block body %}
-
-
-<h1> Opportunities </h1>
-
-{% for tag_data in tags_with_opportunities %}
-    <div>
-        {% comment %} <strong>Tag:</strong> {{ tag_data.tag.name }} {% endcomment %}
-        {% comment %} <ul>
-            {% for opportunity in tag_data.opportunities %}
-            <div> 
-            <h3> {{ opportunity.name }} || <a href="{{ opportunity.url }}"> link </a> </h3> 
-            {{ opportunity.description | truncatewords:50 }}
-            <a> </a> 
-            </div> 
-            {% endfor %}
-        </ul>
-    </div>
-{% endfor %} {% endcomment %}
-
 

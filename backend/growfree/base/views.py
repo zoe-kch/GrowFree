@@ -57,6 +57,17 @@ def resources(request):
 
     return render(request, "opportunities.html", context)
 
+def resources_filter_by_tag(request , tag_name): 
+    filtered_resources = models.Opportunity.objects.filter(tags__name = tag_name)
+
+    context = { 
+        "resources" : filtered_resources, 
+        "tags" : list(tag_name)
+               }
+
+    return render(request, "opportunities.html", context)
+
+
 
 ## Form  
 def research_help(request):
