@@ -91,7 +91,7 @@
             <div class="section">
               <h3>Financial Literacy Courses</h3>
               <ul>
-                {% for i in data %}
+              {% for i in data %}
               {% if i.topic == "Financial_Literacy_Courses" %}
                 <li><a href="{{ i.url }}">{{i.name}}</a></li>
               {%endif %}

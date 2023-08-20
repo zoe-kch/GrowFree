@@ -111,7 +111,7 @@ def academic_screen(request):
 
     
 def finance(request):
-    context = { "data" : models.college_help.objects.filter(resource_type="finance")} 
+    context = {
+        "data" : models.college_help.objects.filter(resource_type="finance")} 
 
-    context=None
     return render(request, "financing.html" , context)
